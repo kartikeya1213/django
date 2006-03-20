@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-20 11:39+0100\n"
+"POT-Creation-Date: 2006-03-20 11:44+0100\n"
 "PO-Revision-Date: 2005-10-08 00:03+0200\n"
 "Last-Translator: Georg Bauer <gb@bofh.ms>\n"
 "MIME-Version: 1.0\n"
@@ -1470,74 +1470,78 @@ msgid "German"
 msgstr "Deutsch"
 
 #: conf/global_settings.py:42
+msgid "Greek"
+msgstr "Griechisch"
+
+#: conf/global_settings.py:43
 msgid "English"
 msgstr "Englisch"
 
-#: conf/global_settings.py:43
+#: conf/global_settings.py:44
 msgid "Spanish"
 msgstr "Spanisch"
 
-#: conf/global_settings.py:44
+#: conf/global_settings.py:45
 msgid "French"
 msgstr "Französisch"
 
-#: conf/global_settings.py:45
+#: conf/global_settings.py:46
 msgid "Galician"
 msgstr "Galicisch"
 
-#: conf/global_settings.py:46
+#: conf/global_settings.py:47
 msgid "Icelandic"
 msgstr "Isländisch"
 
-#: conf/global_settings.py:47
+#: conf/global_settings.py:48
 msgid "Italian"
 msgstr "Italienisch"
 
-#: conf/global_settings.py:48
+#: conf/global_settings.py:49
 msgid "Japanese"
 msgstr "Japanisch"
 
-#: conf/global_settings.py:49
+#: conf/global_settings.py:50
 msgid "Dutch"
 msgstr "Holländisch"
 
-#: conf/global_settings.py:50
+#: conf/global_settings.py:51
 msgid "Norwegian"
 msgstr "Norwegisch"
 
-#: conf/global_settings.py:51
+#: conf/global_settings.py:52
 msgid "Brazilian"
 msgstr "Brasilianisch"
 
-#: conf/global_settings.py:52
+#: conf/global_settings.py:53
 msgid "Romanian"
 msgstr "Rumänisch"
 
-#: conf/global_settings.py:53
+#: conf/global_settings.py:54
 msgid "Russian"
 msgstr "Russisch"
 
-#: conf/global_settings.py:54
+#: conf/global_settings.py:55
 msgid "Slovak"
 msgstr "Slowakisch"
 
-#: conf/global_settings.py:55
+#: conf/global_settings.py:56
 msgid "Slovenian"
 msgstr "Slowenisch"
 
-#: conf/global_settings.py:56
+#: conf/global_settings.py:57
 msgid "Serbian"
 msgstr "Serbisch"
 
-#: conf/global_settings.py:57
+#: conf/global_settings.py:58
 msgid "Swedish"
 msgstr "Schwedisch"
 
-#: conf/global_settings.py:58
+#: conf/global_settings.py:59
 msgid "Simplified Chinese"
 msgstr "Vereinfachtes Chinesisch"
 
-#: conf/global_settings.py:59
+#: conf/global_settings.py:60
 msgid "Traditional Chinese"
 msgstr "Traditionelles Chinesisch"
 
@@ -1907,4 +1911,3 @@ msgid ""
 msgstr ""
 "Der Webbrowser scheint keine Cookies aktiviert zu haben. Cookies sind für "
 "die Anmeldung zwingend notwendig."
-
