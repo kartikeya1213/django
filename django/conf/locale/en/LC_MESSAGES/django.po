@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-28 17:33+0100\n"
+"POT-Creation-Date: 2011-03-01 01:20+0100\n"
 "PO-Revision-Date: 2010-05-13 15:35+0200\n"
 "Last-Translator: Django team\n"
 "Language-Team: English <en@li.org>\n"
@@ -17,258 +17,262 @@ msgid "Arabic"
 msgstr ""
 
 #: conf/global_settings.py:45
-msgid "Bulgarian"
+msgid "Azerbaijani"
 msgstr ""
 
 #: conf/global_settings.py:46
-msgid "Bengali"
+msgid "Bulgarian"
 msgstr ""
 
 #: conf/global_settings.py:47
-msgid "Bosnian"
+msgid "Bengali"
 msgstr ""
 
 #: conf/global_settings.py:48
-msgid "Catalan"
+msgid "Bosnian"
 msgstr ""
 
 #: conf/global_settings.py:49
-msgid "Czech"
+msgid "Catalan"
 msgstr ""
 
 #: conf/global_settings.py:50
-msgid "Welsh"
+msgid "Czech"
 msgstr ""
 
 #: conf/global_settings.py:51
-msgid "Danish"
+msgid "Welsh"
 msgstr ""
 
 #: conf/global_settings.py:52
-msgid "German"
+msgid "Danish"
 msgstr ""
 
 #: conf/global_settings.py:53
-msgid "Greek"
+msgid "German"
 msgstr ""
 
 #: conf/global_settings.py:54
-msgid "English"
+msgid "Greek"
 msgstr ""
 
 #: conf/global_settings.py:55
-msgid "British English"
+msgid "English"
 msgstr ""
 
 #: conf/global_settings.py:56
-msgid "Spanish"
+msgid "British English"
 msgstr ""
 
 #: conf/global_settings.py:57
-msgid "Argentinian Spanish"
+msgid "Spanish"
 msgstr ""
 
 #: conf/global_settings.py:58
-msgid "Mexican Spanish"
+msgid "Argentinian Spanish"
 msgstr ""
 
 #: conf/global_settings.py:59
-msgid "Estonian"
+msgid "Mexican Spanish"
 msgstr ""
 
 #: conf/global_settings.py:60
-msgid "Basque"
+msgid "Estonian"
 msgstr ""
 
 #: conf/global_settings.py:61
-msgid "Persian"
+msgid "Basque"
 msgstr ""
 
 #: conf/global_settings.py:62
-msgid "Finnish"
+msgid "Persian"
 msgstr ""
 
 #: conf/global_settings.py:63
-msgid "French"
+msgid "Finnish"
 msgstr ""
 
 #: conf/global_settings.py:64
-msgid "Frisian"
+msgid "French"
 msgstr ""
 
 #: conf/global_settings.py:65
-msgid "Irish"
+msgid "Frisian"
 msgstr ""
 
 #: conf/global_settings.py:66
-msgid "Galician"
+msgid "Irish"
 msgstr ""
 
 #: conf/global_settings.py:67
-msgid "Hebrew"
+msgid "Galician"
 msgstr ""
 
 #: conf/global_settings.py:68
-msgid "Hindi"
+msgid "Hebrew"
 msgstr ""
 
 #: conf/global_settings.py:69
-msgid "Croatian"
+msgid "Hindi"
 msgstr ""
 
 #: conf/global_settings.py:70
-msgid "Hungarian"
+msgid "Croatian"
 msgstr ""
 
 #: conf/global_settings.py:71
-msgid "Indonesian"
+msgid "Hungarian"
 msgstr ""
 
 #: conf/global_settings.py:72
-msgid "Icelandic"
+msgid "Indonesian"
 msgstr ""
 
 #: conf/global_settings.py:73
-msgid "Italian"
+msgid "Icelandic"
 msgstr ""
 
 #: conf/global_settings.py:74
-msgid "Japanese"
+msgid "Italian"
 msgstr ""
 
 #: conf/global_settings.py:75
-msgid "Georgian"
+msgid "Japanese"
 msgstr ""
 
 #: conf/global_settings.py:76
-msgid "Khmer"
+msgid "Georgian"
 msgstr ""
 
 #: conf/global_settings.py:77
-msgid "Kannada"
+msgid "Khmer"
 msgstr ""
 
 #: conf/global_settings.py:78
-msgid "Korean"
+msgid "Kannada"
 msgstr ""
 
 #: conf/global_settings.py:79
-msgid "Lithuanian"
+msgid "Korean"
 msgstr ""
 
 #: conf/global_settings.py:80
-msgid "Latvian"
+msgid "Lithuanian"
 msgstr ""
 
 #: conf/global_settings.py:81
-msgid "Macedonian"
+msgid "Latvian"
 msgstr ""
 
 #: conf/global_settings.py:82
-msgid "Malayalam"
+msgid "Macedonian"
 msgstr ""
 
 #: conf/global_settings.py:83
-msgid "Mongolian"
+msgid "Malayalam"
 msgstr ""
 
 #: conf/global_settings.py:84
-msgid "Dutch"
+msgid "Mongolian"
 msgstr ""
 
 #: conf/global_settings.py:85
-msgid "Norwegian"
+msgid "Dutch"
 msgstr ""
 
 #: conf/global_settings.py:86
-msgid "Norwegian Bokmal"
+msgid "Norwegian"
 msgstr ""
 
 #: conf/global_settings.py:87
-msgid "Norwegian Nynorsk"
+msgid "Norwegian Bokmal"
 msgstr ""
 
 #: conf/global_settings.py:88
-msgid "Punjabi"
+msgid "Norwegian Nynorsk"
 msgstr ""
 
 #: conf/global_settings.py:89
-msgid "Polish"
+msgid "Punjabi"
 msgstr ""
 
 #: conf/global_settings.py:90
-msgid "Portuguese"
+msgid "Polish"
 msgstr ""
 
 #: conf/global_settings.py:91
-msgid "Brazilian Portuguese"
+msgid "Portuguese"
 msgstr ""
 
 #: conf/global_settings.py:92
-msgid "Romanian"
+msgid "Brazilian Portuguese"
 msgstr ""
 
 #: conf/global_settings.py:93
-msgid "Russian"
+msgid "Romanian"
 msgstr ""
 
 #: conf/global_settings.py:94
-msgid "Slovak"
+msgid "Russian"
 msgstr ""
 
 #: conf/global_settings.py:95
-msgid "Slovenian"
+msgid "Slovak"
 msgstr ""
 
 #: conf/global_settings.py:96
-msgid "Albanian"
+msgid "Slovenian"
 msgstr ""
 
 #: conf/global_settings.py:97
-msgid "Serbian"
+msgid "Albanian"
 msgstr ""
 
 #: conf/global_settings.py:98
-msgid "Serbian Latin"
+msgid "Serbian"
 msgstr ""
 
 #: conf/global_settings.py:99
-msgid "Swedish"
+msgid "Serbian Latin"
 msgstr ""
 
 #: conf/global_settings.py:100
-msgid "Tamil"
+msgid "Swedish"
 msgstr ""
 
 #: conf/global_settings.py:101
-msgid "Telugu"
+msgid "Tamil"
 msgstr ""
 
 #: conf/global_settings.py:102
-msgid "Thai"
+msgid "Telugu"
 msgstr ""
 
 #: conf/global_settings.py:103
-msgid "Turkish"
+msgid "Thai"
 msgstr ""
 
 #: conf/global_settings.py:104
-msgid "Ukrainian"
+msgid "Turkish"
 msgstr ""
 
 #: conf/global_settings.py:105
-msgid "Urdu"
+msgid "Ukrainian"
 msgstr ""
 
 #: conf/global_settings.py:106
-msgid "Vietnamese"
+msgid "Urdu"
 msgstr ""
 
 #: conf/global_settings.py:107
-msgid "Simplified Chinese"
+msgid "Vietnamese"
 msgstr ""
 
 #: conf/global_settings.py:108
+msgid "Simplified Chinese"
+msgstr ""
+
+#: conf/global_settings.py:109
 msgid "Traditional Chinese"
 msgstr ""
 
