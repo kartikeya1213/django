@@ -11,8 +11,6 @@ incompatible changes`_. There are also some features that have been dropped,
 which are detailed in :doc:`our deprecation plan </internals/deprecation>`, and
 we've `begun the deprecation process for some features`_.
 
-
-
 .. _new features: `What's new in Django 1.4`_
 .. _backwards incompatible changes: backwards-incompatible-changes-1.4_
 .. _begun the deprecation process for some features: deprecated-features-1.4_
@@ -100,23 +98,6 @@ doctype. While Django will be careful in its use of HTML5 features, to maintain
 compatibility with older browsers, this change means that you can use any HTML5
 features you need in admin pages without having to lose HTML validity or
 override the provided templates to change the doctype.
-
-Supported browsers for the admin
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Django hasn't had a clear policy on which browsers are supported for using the
-admin app. Django's new policy formalizes existing practices: `YUI's A-grade`_
-browsers should provide a fully-functional admin experience, with the notable
-exception of IE6, which is no longer supported.
-
-Released over ten years ago, IE6 imposes many limitations on modern web
-development. The practical implications of this policy are that contributors
-are free to improve the admin without consideration for these limitations.
-
-This new policy **has no impact** on development outside of the admin. Users of
-Django are free to develop webapps compatible with any range of browsers.
-
-.. _YUI's A-grade: http://yuilibrary.com/yui/docs/tutorials/gbs/
 
 List filters in admin interface
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -557,6 +538,23 @@ In case your ``ADMIN_MEDIA_PREFIX`` is set to an own domain (e.g.
     your server's file system when you deploy your site, you have to update
     that path. The files were moved from :file:`django/contrib/admin/media/`
     to :file:`django/contrib/admin/static/admin/`.
+
+Supported browsers for the admin
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Django hasn't had a clear policy on which browsers are supported for using the
+admin app. Django's new policy formalizes existing practices: `YUI's A-grade`_
+browsers should provide a fully-functional admin experience, with the notable
+exception of IE6, which is no longer supported.
+
+Released over ten years ago, IE6 imposes many limitations on modern web
+development. The practical implications of this policy are that contributors
+are free to improve the admin without consideration for these limitations.
+
+This new policy **has no impact** on development outside of the admin. Users of
+Django are free to develop webapps compatible with any range of browsers.
+
+.. _YUI's A-grade: http://yuilibrary.com/yui/docs/tutorials/gbs/
 
 Removed admin icons
 ~~~~~~~~~~~~~~~~~~~
