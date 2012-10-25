@@ -2,6 +2,8 @@
 Django 1.5 release notes - UNDER DEVELOPMENT
 ============================================
 
+Welcome to Django 1.5!
+
 These release notes cover the `new features`_, as well
 as some `backwards incompatible changes`_ you'll want to be aware of
 when upgrading from Django 1.4 or older versions. We've also dropped some
@@ -13,23 +15,98 @@ features`_.
 .. _`backwards incompatible changes`: `Backwards incompatible changes in 1.5`_
 .. _`begun the deprecation process for some features`: `Features deprecated in 1.5`_
 
+Overview
+========
+
+The biggest new feature in Django 1.5 is the `configurable User model`_. Before
+Django 1.5, applications that wanted to use Django's auth framework
+(:mod:`django.contrib.auth`) were forced to use Django's definition of a "user".
+In Django 1.5, you can now swap out the ``User`` model for one that you write
+yourself. This could be a simple extension to the existing ``User`` model -- for
+example, you could add a Twitter or Facebook ID field -- or you could completely
+replace the ``User`` with one totally customized for your site.
+
+Django 1.5 is also the first release with `Python 3 support`_! We're labling
+this support "experimental" because we don't yet consider it production-ready,
+but everything's in place for you to start porting your apps to Python 3.
+Our next release, Django 1.6, will support Python 3 without reservations.
+
+Other notable new features in Django 1.5 include:
+
+* `Support for saving a subset of model's fields`_ -
+  :meth:`Model.save() <django.db.models.Model.save()>` now accepts an
+  ``update_fields`` argument, letting you specify which fields are
+  written back to the databse when you call ``save()``. This can help
+  in high-concurrancy operations, and can improve performance.
+
+* Better `support for streaming responses <#explicit-streaming-responses>`_ via
+  the new  :class:`~django.http.StreamingHttpResponse` response class.
+
+* `GeoDjango`_ now supports PostGIS 2.0.
+
+* ... and more; `see below <#what-s-new-in-django-1-5>`_.
+
+Wherever possible we try to introduce new features in a backwards-compatible
+manner per :doc:`our API stability policy </misc/api-stability>` policy.
+However, as with previous releases, Django 1.5 ships with some minor
+`backwards incompatible changes`_; people upgrading from previous versions
+of Django should read that list carefully.
+
+One deprecated feature worth noting is the shift to "new-style" :ttag:`url` tag.
+Prior to Django 1.3, syntax like ``{% url myview %}`` was interpreted
+incorrectly (Django considered ``"myview"`` to be a literal name of a view, not
+a template variable named ``myview``). Django 1.3 and above introduced the
+``{% load url from future %}`` syntax to bring in the corrected behavior where
+``myview`` was seen as a variable.
+
+The upshot of this is that if you are not using ``{% load url from future %}``
+in your templates, you'll need to change tags like ``{% url myview %}`` to
+``{% url "myview" %}``. If you *were* using ``{% load url from future %}`` you
+can simply remove that line under Django 1.5
+
 Python compatibility
 ====================
 
-Django 1.5 has dropped support for Python 2.5. Python 2.6.5 is now the minimum
-required Python version. Django is tested and supported on Python 2.6 and
-2.7.
+Django 1.5 requires Python 2.6.5 or above, though we **highly recommended**
+Python 2.7.3 or above. Support for Python 2.5 and below as been dropped.
 
 This change should affect only a small number of Django users, as most
 operating-system vendors today are shipping Python 2.6 or newer as their default
 version. If you're still using Python 2.5, however, you'll need to stick to
-Django 1.4 until you can upgrade your Python version. Per :doc:`our support policy
-</internals/release-process>`, Django 1.4 will continue to receive security
-support until the release of Django 1.6.
+Django 1.4 until you can upgrade your Python version. Per :doc:`our support
+policy </internals/release-process>`, Django 1.4 will continue to receive
+security support until the release of Django 1.6.
 
-Django 1.5 does not run on a Jython final release, because Jython's latest release
-doesn't currently support Python 2.6. However, Jython currently does offer an alpha
-release featuring 2.7 support.
+Django 1.5 does not run on a Jython final release, because Jython's latest
+release doesn't currently support Python 2.6. However, Jython currently does
+offer an alpha release featuring 2.7 support, and Django 1.5 supports that alpha
+release.
+
+Python 3 support
+~~~~~~~~~~~~~~~~
+
+Django 1.5 introduces support for Python 3 - specifically, Python
+3.2 and above. This comes in the form of a **single** codebase; you don't
+need to install a different version of Django on Python 3. This means that
+you can write application targeted for just Python 2, just Python 3, or single
+applications that support both platforms.
+
+However, we're labeling this support "experimental" for now: although it's
+receved extensive testing via our automated test suite, it's recieved very
+little real-world testing. We've done our best to eliminate bugs, but we can't
+be sure we covered all possible uses of Django. Further, Django's more than a
+web framework; it's an ecosystem of pluggable components. At this point, very
+few third-party applications have been ported to Python 3, so it's unliukely
+that a real-world application will have all its dependecies satisfied under
+Python 3.
+
+Thus, we're recommending that Django 1.5 not be used in production under Python
+3. Instead, use this oportunity to begin :doc:`porting applications to Python 3
+<topics/python>`. If you're an author of a pluggable component, we encourage you
+to start porting now.
+
+We plan to offer first-class, production-ready support for Python 3 in our next
+release, Django 1.6.
 
 What's new in Django 1.5
 ========================
