@@ -98,6 +98,10 @@ msgid "Argentinian Spanish"
 msgstr ""
 
 #: conf/global_settings.py:72
+msgid "Colombian Spanish"
+msgstr ""
+
+#: conf/global_settings.py:72
 msgid "Mexican Spanish"
 msgstr ""
 
