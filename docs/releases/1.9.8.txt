@@ -9,4 +9,6 @@ Django 1.9.8 fixes several bugs in 1.9.7.
 Bugfixes
 ========
 
-* ...
+* Fixed missing ``varchar/text_pattern_ops`` index on ``CharField`` and
+  ``TextField`` respectively when using ``AddField`` on PostgreSQL
+  (:ticket:`26889`).
