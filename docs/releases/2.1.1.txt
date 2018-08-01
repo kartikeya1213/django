@@ -9,4 +9,5 @@ Django 2.1.1 fixes several bugs in 2.1.
 Bugfixes
 ========
 
-* ...
+* Fixed a race condition in ``QuerySet.update_or_create()`` that could result
+  in data loss (:ticket:`29499`).
