@@ -9,4 +9,5 @@ Django 3.0.8 fixes several bugs in 3.0.7.
 Bugfixes
 ========
 
-* ...
+* Fixed messages of ``InvalidCacheKey`` exceptions and ``CacheKeyWarning``
+  warnings raised by cache key validation (:ticket:`31654`).
