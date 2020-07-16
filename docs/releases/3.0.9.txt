@@ -9,4 +9,9 @@ Django 3.0.9 fixes several bugs in 3.0.8.
 Bugfixes
 ========
 
-* ...
+* Allowed setting the ``SameSite`` cookie flag in
+  :meth:`.HttpResponse.delete_cookie` (:ticket:`31790`).
+
+* Fixed setting the ``Secure`` cookie flag in
+  :meth:`.HttpResponse.delete_cookie` for cookies that use ``samesite='none'``
+  (:ticket:`31790`).
