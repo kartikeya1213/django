@@ -11,6 +11,7 @@ from asgiref.testing import ApplicationCommunicator
 from django.contrib.staticfiles.handlers import ASGIStaticFilesHandler
 from django.core.asgi import get_asgi_application
 from django.core.exceptions import RequestDataTooBig
+from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.core.handlers.asgi import ASGIHandler, ASGIRequest
 from django.core.signals import request_finished, request_started
 from django.db import close_old_connections
@@ -700,8 +701,7 @@ class ASGITest(SimpleTestCase):
             await communicator.receive_output(timeout=0.2)
 
 
-class DataUploadMaxMemorySizeASGITests(SimpleTestCase):
-
+class MaxMemorySizeASGITests(SimpleTestCase):
     def make_request(
         self,
         body,
@@ -816,6 +816,34 @@ class DataUploadMaxMemorySizeASGITests(SimpleTestCase):
             files = request.FILES
         self.assertEqual(len(files), 1)
         uploaded = files["file"]
+        self.addCleanup(uploaded.close)
+        self.assertEqual(uploaded.read(), file_content)
+
+    def test_multipart_file_upload_limited_by_file_upload_max(self):
+        boundary = "testboundary"
+        file_content = b"x" * 100
+        body = (
+            (
+                f"--{boundary}\r\n"
+                f'Content-Disposition: form-data; name="file"; filename="test.txt"\r\n'
+                f"Content-Type: application/octet-stream\r\n"
+                f"\r\n"
+            ).encode()
+            + file_content
+            + f"\r\n--{boundary}--\r\n".encode()
+        )
+        # Provide an understated content-length.
+        request = self.make_request(
+            body,
+            content_type=f"multipart/form-data; boundary={boundary}".encode(),
+            content_length=9,
+        )
+        with self.settings(FILE_UPLOAD_MAX_MEMORY_SIZE=10):
+            files = request.FILES
+        self.assertEqual(len(files), 1)
+        uploaded = files["file"]
+        # The file is not loaded into memory.
+        self.assertNotIsInstance(uploaded, InMemoryUploadedFile)
         self.addCleanup(uploaded.close)
         self.assertEqual(uploaded.read(), file_content)
 
